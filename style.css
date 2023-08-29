@@ -1,0 +1,88 @@
+body {
+    background-image: linear-gradient(rgb(233, 249, 60) , rgb(247, 114, 12));
+}
+
+form {
+    background-color: rgb(255, 183, 0);
+    margin: 70px;
+    border-style: solid;
+    border-color: orange;
+    border-width: 3px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #333; 
+}
+
+header {
+    background-color: orange;
+    border-radius: 15px;
+    padding: 1px;
+    margin: 70px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    box-shadow: 0px 0px 15px #333;
+}
+
+.Usuario {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 15px;
+}
+
+.Contraseña {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 1%;
+}
+
+.Enviar {
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+#username {
+    background-color: rgb(255, 183, 0);
+    padding: 3px;
+    border-radius: 10px;
+}
+
+#password {
+    background-color: rgb(255, 183, 0);
+    padding: 3px;
+    border-radius: 10px;
+}
+
+button {
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 0px 15px rgb(255, 222, 0); 
+    padding: 10px;
+    width: 26%;
+    font-size: medium;
+    background-color: rgb(255, 222, 0);
+}
+
+p {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: large;
+}
+
+.Logo {
+    text-align: center;
+    height: 75px;
+    transition: transform 0.2s;
+  }
+  
+.Logo:hover {
+    transform: scale(1.5);
+  }
+
+span {
+    color: orangered;
+}

@@ -1,0 +1,117 @@
+body {
+    background-image: linear-gradient(rgb(0, 106, 255) , rgb(9, 44, 147));
+}
+
+form {
+    background-color: rgb(0, 119, 255);
+    border-style: solid;
+    border-color: rgb(0, 119, 255);
+    border-radius: 15px;
+    margin: 70px;
+    box-shadow: 0px 0px 15px #333;
+}
+
+header {
+    text-shadow: 0px 0px 15px navy;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 70px;
+    text-align: center;
+    background-color: rgb(0, 119, 255);
+    color: rgb(255, 255, 255);
+    padding: 1px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #333;
+}
+
+.Usuario {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px navy;
+}
+
+#username {
+    border-radius: 10px;
+    padding: 3px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(0, 119, 255);
+}
+
+.Contraseña {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px navy;
+}
+
+#password {
+    border-radius: 10px;
+    padding: 3px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color:rgb(0, 119, 255);
+}
+
+.email {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px navy;
+}
+
+#email {
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 3px;
+    background-color: rgb(0, 119, 255);
+}
+
+button {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    padding: 10px;
+    width: 25%;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    font-size: medium;
+    box-shadow: 0px 0px 15px rgb(0, 153, 255);
+}
+
+.Enviar {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 0px 0px 15px navy;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.Logo {
+    text-align: center;
+    height: 95px;
+    transition: transform 0.2s;
+  }
+  
+.Logo:hover {
+    transform: scale(1.5);
+  }
+
+span {
+    color: orange;
+}
