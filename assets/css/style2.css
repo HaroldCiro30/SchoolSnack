@@ -1,44 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 body {
-    background-image: linear-gradient(rgb(0, 106, 255) , rgb(9, 44, 147));
+    background-image: linear-gradient(to right, rgb(255, 100, 100) , rgb(255, 255, 100));
 }
 
 form {
-    background-color: rgb(0, 119, 255);
+    background-color: rgb(255, 100, 100);
     border-style: solid;
-    border-color: rgb(0, 119, 255);
+    border-color: rgb(255, 100, 100);
     border-radius: 15px;
     margin: 70px;
     box-shadow: 0px 0px 15px #333;
 }
 
-header {
-    text-shadow: 0px 0px 15px navy;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 70px;
+h2 {
     text-align: center;
-    background-color: rgb(0, 119, 255);
-    color: rgb(255, 255, 255);
-    padding: 1px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px #333;
+    font-family: arial;
+    color: white;
 }
 
 .Usuario {
+    color: white;
     padding: 10px;
     color: rgb(255, 255, 255);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    text-shadow: 0px 0px 15px navy;
 }
 
 #username {
+    color: rgb(255, 100, 100);
     border-radius: 10px;
     padding: 3px;
     border-style: solid;
     border-color: rgb(255, 255, 255);
-    background-color: rgb(0, 119, 255);
+    font-family: arial;
+    font-weight: bold;
 }
 
 .Contraseña {
@@ -47,15 +44,16 @@ header {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    text-shadow: 0px 0px 15px navy;
 }
 
 #password {
+    
     border-radius: 10px;
     padding: 3px;
     border-style: solid;
     border-color: rgb(255, 255, 255);
-    background-color:rgb(0, 119, 255);
+    font-family: arial;
+    font-weight: bold;
 }
 
 .email {
@@ -64,7 +62,6 @@ header {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    text-shadow: 0px 0px 15px navy;
 }
 
 #email {
@@ -72,28 +69,27 @@ header {
     border-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 3px;
-    background-color: rgb(0, 119, 255);
+    font-family: arial;
+    font-weight: bold;
 }
 
 button {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    color: orange;
+    color: black;
     padding: 10px;
     width: 25%;
-    background-color: white;
+    background-color: rgb(255, 255, 100);
     border-radius: 10px;
     border-style: solid;
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 100);
     font-size: medium;
-    box-shadow: 0px 0px 15px rgb(0, 153, 255);
 }
 
 .Enviar {
     margin: 5px;
     padding: 10px;
     text-align: center;
-    text-shadow: 0px 0px 15px navy;
 }
 
 p {
@@ -107,11 +103,45 @@ p {
     height: 95px;
     transition: transform 0.2s;
   }
-  
+
+  a {
+    text-decoration: none;
+  }
+
 .Logo:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
 
 span {
     color: orange;
 }
+
+span:hover {
+    color:red;
+}
+
+@media (max-width: 480px) {
+    form {
+      max-width: 100%;
+    }
+  
+    input[type="submit"] {
+      width: 100%;
+    }
+  
+    nav {
+      float: none;
+      text-align: center;
+    }
+  
+    nav a {
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 1368px) {
+    form {
+      max-width: 400px;
+    }
+  }
+  

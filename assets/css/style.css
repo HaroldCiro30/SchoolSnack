@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body {
+    background-color: rgb(95, 95, 95);
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+form {
+    display: grid;
+    background-color: rgb(255, 202, 88);
+    margin: 70px;
+    border-style: solid;
+    border-color: rgb(255, 100, 100);
+    border-width: 3px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #333; 
+}
+
+.Usuario {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 15px;
+}
+
+.Contraseña {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 1%;
+}
+
+.Enviar {
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+#username {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 100, 100);
+    font-weight: bold;
+    font-size: medium;
+    border-style: solid;
+    border-color: white;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+#password {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 100, 100);
+    font-weight: bold;
+    font-size: medium;
+    border-style: solid;
+    border-color: white;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.submit {
+    text-decoration: none;
+}
+
+button {
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 5px 10px 5px;
+    width: 26%;
+    font-size: medium;
+    border-style: solid;
+    border-color: rgb(255, 187, 0);
+    background-color: rgb(255, 187, 0);
+}
+
+p {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: large;
+}
+
+span {
+    color: orangered;
+}
+
+span:hover {
+    color: red;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.Logo {
+    text-align: center;
+    height: 75px;
+    transition: transform 0.2s;
+  }
+  
+.Logo:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 480px) {
+    form {
+      max-width: 100%;
+    }
+  
+    input[type="submit"] {
+      width: 100%;
+    }
+  
+    nav {
+      float: none;
+      text-align: center;
+    }
+  
+    nav a {
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 1368px) {
+    form {
+      max-width: 400px;
+    }
+  }
+  

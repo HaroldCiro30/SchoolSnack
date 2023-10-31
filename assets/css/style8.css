@@ -1,0 +1,29 @@
+body {
+    background-image: linear-gradient(to right, rgb(255, 221, 153), rgb(255, 170, 170));
+}
+
+@media (max-width: 480px) {
+    form {
+      max-width: 100%;
+    }
+  
+    input[type="submit"] {
+      width: 100%;
+    }
+  
+    nav {
+      float: none;
+      text-align: center;
+    }
+  
+    nav a {
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 1368px) {
+    form {
+      max-width: 400px;
+    }
+  }
+  

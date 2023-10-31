@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body {
+    background-image: linear-gradient(to right, rgb(255, 221, 153), rgb(255, 170, 170));
+}
+
+#menu li {
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+    padding: 25px;
+    position: relative; 
+}
+
+#menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#menu li a:hover {
+    color: red;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: rgb(255, 153, 102);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 153, 102);
+    border: 2px solid rgb(255, 221, 153);
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    
+}
+
+#menu li:hover .submenu {
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 155, 100);
+}
+
+span {
+    color: white;
+}
+
+.caja1 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    opacity: 0.6;
+    display: inline-block;
+}
+
+.caja2 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja3 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja4 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja5 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja6 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja7 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja8 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja9 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja10 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.caja11 {
+    background-color: orange;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+@media (max-width: 480px) {
+    form {
+      max-width: 100%;
+    }
+  
+    input[type="submit"] {
+      width: 100%;
+    }
+  
+    nav {
+      float: none;
+      text-align: center;
+    }
+  
+    nav a {
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 1368px) {
+    form {
+      max-width: 400px;
+    }
+  }
+  
