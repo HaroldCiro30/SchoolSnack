@@ -14,8 +14,8 @@ form {
 }
 
 h2 {
+  font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-family: arial;
     color: white;
 }
 
@@ -24,7 +24,7 @@ h2 {
     padding: 10px;
     color: rgb(255, 255, 255);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
@@ -34,7 +34,7 @@ h2 {
     padding: 3px;
     border-style: solid;
     border-color: rgb(255, 255, 255);
-    font-family: arial;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
@@ -42,7 +42,7 @@ h2 {
     padding: 10px;
     color: rgb(255, 255, 255);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
@@ -52,7 +52,7 @@ h2 {
     padding: 3px;
     border-style: solid;
     border-color: rgb(255, 255, 255);
-    font-family: arial;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
@@ -60,7 +60,7 @@ h2 {
     padding: 10px;
     color: rgb(255, 255, 255);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
@@ -69,13 +69,13 @@ h2 {
     border-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 3px;
-    font-family: arial;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
 button {
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: black;
     padding: 10px;
     width: 25%;
@@ -93,7 +93,7 @@ button {
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: white;
 }
@@ -141,7 +141,8 @@ span:hover {
   
   @media (min-width: 1368px) {
     form {
-      max-width: 400px;
+      max-width: 1000px;
+      text-align: center;
     }
   }
   
