@@ -49,44 +49,63 @@ body {
 
 .container {
     font-family: 'Montserrat', sans-serif;
-    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 20px;
   }
   
   .post {
     background-color: #008000;
     width: 500px;
     height: 410px;
-    position: relative;
     border-radius: 20px;
     justify-content: center;
     text-align: center;
   }
   
   .caja {
-    margin-top: 189px;
-    margin-left: 85px;
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
     background-color: rgb(255, 170, 80);
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    border-radius: 20px;
-    left: 500px;
-    justify-content: center;
-    text-align: center;
+    width: 500px;
+    height: 370px;
   }
+
   .imagen {
-    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     background-color: #0000ff;
     width: 300px;
     height: 200px;
-    position: absolute;
-    bottom: 70px;
-    left: 40rem
+    border-radius: 20px;
   }
 
   .imagen img {
     width: 150px;
     display: flex;
     margin: 0 auto;
+  }
+
+  @media (max-width: 480px) {
+  
+    input[type="submit"] {
+      width: 100%;
+    }
+  
+    nav {
+      float: none;
+      text-align: center;
+    }
+  
+    nav a {
+      margin: 10px;
+    }
+  }
+  
+  @media (min-width: 1368px) {
+ 
   }

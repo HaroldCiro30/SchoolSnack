@@ -1,28 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio de Sesión</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/png" href="SchoolSnackPrototipo.png">
 </head>
 <body>
   <div class="container">
-    <form>
-      <h2>INICIO DE SESIÓN</h2>
-      <div class="Usuario">
-        <input type="text" id="username" name="username" placeholder="Usuario" required>
+      <div class="signin-signup">
+          <form action="" class="sign-in-form">
+              <h2 class="title">Inicia Sesión</h2>
+              <div class="input-field">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Usuario">
+              </div>
+              <div class="input-field">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" placeholder="Contraseña">
+              </div>
+              <input type="submit" value="Inicia Sesión" class="btn">
+              <p class="social-text">Tambien puedes ingresar con estas redes!</p>
+              <div class="social-media">
+                  <a href="#" class="social-icon">
+                      <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="" class="social-icon">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="" class="social-icon">
+                      <i class="fab fa-google"></i>
+                  </a>
+                  <a href="" class="social-icon">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+              </div>
+              <p class="account-text">No tienes una cuenta? <a href="#" id="sign-up-btn2">Registrate!</a></p>
+          </form>
+          <form action="" class="sign-up-form">
+              <h2 class="title">Registrate</h2>
+              <div class="input-field">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Usuario">
+              </div>
+              <div class="input-field">
+                  <i class="fas fa-envelope"></i>
+                  <input type="text" placeholder="Email">
+              </div>
+              <div class="input-field">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" placeholder="Contraseña">
+              </div>
+              <input type="submit" value="Registrate" class="btn">
+              <p class="social-text">Registrate tambien con estas redes!</p>
+              <div class="social-media">
+                  <a href="#" class="social-icon">
+                      <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="" class="social-icon">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="" class="social-icon">
+                      <i class="fab fa-google"></i>
+                  </a>
+                  <a href="" class="social-icon">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+              </div>
+              <p class="account-text">Ya tienes una cuenta? <a href="#" id="sign-in-btn2">Ingresa!</a></p>
+          </form>
+      </div>1
+      <div class="panels-container">
+          <div class="panel left-panel">
+              <div class="content">
+                  <h3>Ya eres parte de SchoolSnack?</h3>
+                  <p>¡NO HAY TIEMPO QUE PERDER! ¡Inicia sesión aca abajo y disfruta de los beneficios de SchoolSnack!</p>
+                  <button class="btn" id="sign-in-btn">Ingresa!</button>
+              </div>
+              <img src="signin.svg" alt="" class="image">
+          </div>
+          <div class="panel right-panel">
+              <div class="content">
+                  <h3>Eres nuevo en SchoolSnack?</h3>
+                  <p>¡Te invitamos a que crees una cuenta en el boton de abajo para que puedas acceder a los beneficios de SchoolSnack te da!</p>
+                  <button class="btn" id="sign-up-btn">Registrate!</button>
+              </div>
+              <img src="signup.svg" alt="" class="image">
+          </div>
       </div>
-      <div class="Contraseña">
-        <input type="password" id="password" name="password" placeholder="Contraseña" required>
-      </div>
-      <div class="Enviar">
-          <button type="submit"><a href="assets/views/paginaprincipal.html">Iniciar Sesión</a></button>
-        <p>¿No tienes una cuenta? <a href="/assets/views/registro.html"><span>Regístrate aquí</span></a>.</p>
-      </div>
-      <div class="Logo">
-        <img src="assets/imagenes/SchoolSnackPrototipo.png" width="200">
-      </div>
-    </form>
   </div>
+  <script src="./assets/javascript/app.js"></script>
 </body>
+</html>
 </html>
