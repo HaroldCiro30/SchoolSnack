@@ -29,7 +29,7 @@ nav a {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    color: rgb(255, 155, 100);
+    color: white;
 }
 
 #lista-prod {
@@ -45,30 +45,59 @@ nav a {
   height: 1.8rem;
   border-radius: 10px;
   text-align: center;
+  margin: 1rem ;
 }
 
-.caja-1 {
-  display: flex;
-  top: 25px;
-  background-color: white;
-  width: 13rem;
-  height: 13rem;
-  border-radius: 10px;
+.caja-1, .caja-2, .caja-3, .caja-4, 
+.caja-5, .caja-6, .caja-7, .caja-8, 
+.caja-9, .caja-10,
+.caja-11, .caja-12, .caja-13, .caja-14,
+.caja-15, .caja-16, .caja-17, .caja-18,
+.caja-19, .caja-20 {
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 10px;
+    margin: 1rem;
+    overflow: hidden; 
+}
+
+.imagen {
+    width: 100%;
+    height: 60%; 
+    overflow: hidden;
+}
+
+.imagen > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.btn-comprar {
+  display: block; 
+  color: black;
+  border-style: none;
+  background-color: rgb(255, 155, 100);
+  padding: 3px;
+  margin: auto; 
+  text-decoration: none;
 }
 
 footer {
   display: flex;
   gap: 3rem;
   justify-content: center;
-  flex-wrap: wrap;
-  align-content: end;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #derechos-autor {
-  color: white;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
+  color: rgb(255, 155, 100);
 }
 
 footer a {
