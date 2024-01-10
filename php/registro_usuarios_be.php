@@ -1,20 +1,72 @@
 <?php
 
-$nombre_usuario = $_POST["usuario"];
-$contrasena = $_POST["password"];
-$email = $_POST["email"];
+    include 'conexion_be.php'; 
 
-$conexion = mysqli_connect("localhost", "root", "", "mydb");
+    $usuario = $_POST['usuario'];
+    $correo = $_POST['correo'];
+    $nombre_completo = $_POST['nombre_completo'];
+    $contrasena = $_POST['contrasena'];
 
-$nombre_usuario = mysqli_real_escape_string($conexion, $nombre_usuario);
-$contrasena = mysqli_real_escape_string($conexion, $contrasena);
-$email = mysqli_real_escape_string($conexion, $email);
+    //Encriptamiento de Contraseña
+    $contrasena = hash('sha512', $contrasena);
 
-$consulta = "INSERT INTO usuarios (usuario, password, email) VALUES ('$nombre_usuario', '$contrasena', '$email')";
-$resultado = mysqli_query($conexion, $consulta);
+    // Verificar que el correo no se repita en la base de datos
+    $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");
 
-mysqli_close($conexion);
+    if(mysqli_num_rows($verificar_correo) > 0){
+        echo '
+            <script>
+                alert("Este correo ya está registrado, ¡Intenta con otro diferente!");
+                window.location = "../index.php";
+            </script>
+        ';
+        exit();
+    }
 
-header("Location: index.php");
+     // Verificar que el nombre completo no se repita en la base de datos
+     $verificar_nombre_completo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE nombre_completo='$nombre_completo' ");
 
+    if(mysqli_num_rows($verificar_nombre_completo) > 0){
+        echo '
+            <script>
+                alert("Este nombre ya está registrado, ¡Intenta con otro diferente!");
+                window.location = "../index.php";
+            </script>
+        ';
+        exit();
+    }
+
+         // Verificar que el usuario no se repita en la base de datos
+         $verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
+
+         if(mysqli_num_rows($verificar_usuario) > 0){
+             echo '
+                 <script>
+                     alert("Este usuario ya está registrado, ¡Intenta con otro diferente!");
+                     window.location = "../index.php";
+                 </script>
+             ';
+             exit();
+         }
+
+    $query = "INSERT INTO usuarios (usuario, correo, nombre_completo, contrasena) 
+                VALUES ('$usuario', '$correo', '$nombre_completo', '$contrasena')";
+
+    $ejecutar = mysqli_query($conexion, $query);
+    
+    if ($ejecutar) {
+        echo '
+        <script>
+            alert("Usuario registrado exitosamente.");
+            window.location = "../index.php";
+        </script>
+        ';
+    } else {
+        echo '
+        <script>
+            alert("Inténtalo de nuevo, usuario no registrado");
+            window.location = "../index.php";
+        </script>
+        ';
+    }
 ?>
