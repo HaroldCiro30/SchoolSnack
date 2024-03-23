@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio de Sesión</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="SchoolSnackPrototipo.png">
+  <link rel="icon" type="image/png" href="assets/imagenes/SchoolSnackPrototipo.png">
 </head>
 <body>
   <div class="container">
@@ -23,21 +23,7 @@
                   <input type="password" placeholder="Contraseña" name="contrasena">
               </div>
               <input type="submit" value="Inicia Sesión" class="btn">
-              <p class="social-text">Tambien puedes ingresar con estas redes!</p>
-              <div class="social-media">
-                  <a href="#" class="social-icon">
-                      <i class="fab fa-facebook"></i>
-                  </a>
-                  <a href="" class="social-icon">
-                      <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="" class="social-icon">
-                      <i class="fab fa-google"></i>
-                  </a>
-                  <a href="" class="social-icon">
-                      <i class="fab fa-linkedin-in"></i>
-                  </a>
-              </div>
+              <p class="social-text">¡Bienvenido de Nuevo, SchoolSnacker!</p>
               <p class="account-text">No tienes una cuenta? <a href="#" id="sign-up-btn2">Registrate!</a></p>
           </form>
 

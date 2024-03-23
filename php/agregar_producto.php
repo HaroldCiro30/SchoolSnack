@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Insertar el nuevo producto en la base de datos
     $query = "INSERT INTO productos (cantidad, producto, disponibilidad) 
-                VALUES ('$cantidad', '$producto', '$disponibilidad')";
+                VALUES ('$cantidad', '$producto', '$Disponibilidad')";
 
     $ejecutar = mysqli_query($conexion, $query);
 

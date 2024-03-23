@@ -1,38 +1,27 @@
-document.getElementById('btnAgregarProducto').addEventListener('click', function () {
-  // Muestra el modal
-  document.getElementById('modalAgregarProducto').style.display = 'block';
+document.addEventListener("DOMContentLoaded", function () {
+  // Hacer una solicitud AJAX para obtener la lista de productos desde el servidor
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+          const productos = JSON.parse(xhr.responseText);
+
+          // Función para actualizar la interfaz de un producto específico
+          function actualizarInterfaz(id, disponible) {
+              const producto = document.getElementById(`producto-${id}`);
+              if (producto) {
+                  producto.querySelector('.btn-comprar').style.display = disponible ? 'block' : 'none';
+              }
+          }
+
+          // Iterar sobre la lista de productos y actualizar la interfaz
+          productos.forEach(producto => {
+              actualizarInterfaz(producto.id, producto.disponible);
+          });
+
+          // Aquí podrías tener lógica para manejar eventos de eliminación y actualización de productos en la base de datos
+      }
+  };
+
+  xhr.open('GET', '../../php/script.php', true);
+  xhr.send();
 });
-
-document.getElementById('formAgregarProducto').addEventListener('submit', function (event) {
-  event.preventDefault(); // Evita que se recargue la página
-
-  // Recopila los datos del formulario
-  var nombreProducto = document.getElementById('nombreProducto').value;
-  var cantidad = document.getElementById('cantidad').value;
-  var disponibilidad = document.querySelector('input[name="disponibilidad"]:checked').value;
-
-  // Agrega un nuevo producto a la base de datos
-  agregar_producto(nombreProducto, cantidad, disponibilidad);
-
-  // Actualiza la tabla con los nuevos datos
-  actualizar_tabla(resultado);
-
-  // Oculta el modal después de agregar el producto
-  document.getElementById('modalAgregarProducto').style.display = 'none';
-});
-
-// Función para actualizar la tabla con los nuevos datos
-function actualizar_tabla(resultado) {
-  // Obtén la tabla
-  const tabla = document.querySelector("table");
-
-  // Recorre los resultados
-  for (const producto of resultado) {
-      // Agrega una nueva fila a la tabla
-      const nueva_fila = tabla.insertRow(tabla.rows.length);
-
-      // Agrega una celda a la fila
-      const celda_id = nueva_fila.insertCell(0);
-      celda_id.innerHTML = producto.id;
-
-      // Agrega una celda a la fila

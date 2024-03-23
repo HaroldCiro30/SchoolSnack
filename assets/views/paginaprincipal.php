@@ -28,6 +28,7 @@
     <title>Pagina Principal - SS</title>    
     <link rel="stylesheet" href="../css/style3.css">
     <link rel="icon" type="image/png" href="/assets/imagenes/SchoolSnackPrototipo.png">
+    <script src="../javascript/script.js"></script>
     <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ASplm5v-IpYU2VAAG7IiKJ3nolHevU8mgmKlWuRfMudbF0LQmviOsGjngqWS1KWGoFe6zjOCaPKRs1-TFB0mWdfdwrwKcGVYj7iSR_qrEVSfXCLhp-1Ug_u-ffWyH5NnCZATQvSH-aXEiLUVnMqB64vM3d5-yVIDX__NRN4xVoDK6GFUgB7lcKXS3HjaMcARoyxM7kAum7oQbyQZJSA-XZgbHPMsy-Ol_qFxtGpseUx_fHkSL8HDyLKe-MmeGemBjYsoJbS2TiHFpOjm8AzHZtfbmOicDqC9To8EY2ie5IsdGtfdMe9Nrr37Q-pdaKO7x7PrMRHGz4URtpUeudmyGw" charset="UTF-8"></script><script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -35,7 +36,7 @@
         <nav>
           <img src="../imagenes/SchoolSnackPrototipo.png" width="75" id="logo-nav"></a>
             <a href="">Elemento Dos</a>
-            <a href="">Acerca de Nosotros</a>
+            <a href="aboutus.html">Acerca de Nosotros</a>
             <a href=""><?php echo ucwords($_SESSION['usuario']);?></a>
             <a href="../../php/cerrar_sesión.php">Cerrar Sesión</a>
           </nav>        
@@ -197,7 +198,6 @@
     <div class="caja-19"></div>
     <div class="caja-20"></div>
 </section>
-
     </main>
     <footer class="pie-pagina">
         <div class="grupo-1">
@@ -227,6 +227,5 @@
             <small>&copy; 2024 <b>SchoolSnack</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-    <script src="/assets/javascript/"></script>
 </body>
 </html>

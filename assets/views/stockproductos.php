@@ -24,9 +24,15 @@ while ($row = $result->fetch_assoc()) {
     echo "<td>" . $row['Producto'] . "</td>";
     echo "<td>" . ($row['Disponibilidad'] ? 'Si' : 'No') . "</td>";
     echo "<td>";
-    echo "<form method='post'>";
+    echo "<form method='post' action='../../php/editar_producto.php'>";
     echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
+    echo "<input type='number' name='nueva_cantidad' value='" . $row['Cantidad'] . "' required>";
+    echo "<input type='text' name='nuevo_producto' value='" . $row['Producto'] . "' required>";
+    echo "<input type='text' name='nueva_disponibilidad' value='" . $row['Disponibilidad'] . "' required>";
     echo "<button type='submit' name='editar'>Editar</button>";
+    echo "</form>";
+    echo "<form method='post' action='../../php/eliminar_producto.php'>";
+    echo "<input type='hidden' name='id' value='" . $row['id'] . "'>";
     echo "<button type='submit' name='eliminar'>Eliminar</button>";
     echo "</form>";
     echo "</td>";

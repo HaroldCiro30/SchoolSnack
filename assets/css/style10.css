@@ -37,6 +37,21 @@ nav a {
   color: white;
 }
 
+#imagen-1, #imagen-2, #imagen-3, #imagen-4 {
+    display: flex;
+    background-color: white;
+    width: 15rem; 
+    height: 15rem; 
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sobre-nosotros {
+    display: flex;
+    justify-content: space-around; 
+  }
+  
 .pie-pagina{
     width: 100%;
     background-color: rgb(255, 155, 100);
@@ -93,25 +108,6 @@ nav a {
   .pie-pagina .grupo-2 small{
     font-size: 15px;
   }
-
-  table {
-    margin-left: 10px;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-th, td {
-    border: 2px solid white;
-    text-align: left;
-    padding: 1rem;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-
   @media screen and (max-width:800px){
     .pie-pagina .grupo-1{
         width: 90%;
