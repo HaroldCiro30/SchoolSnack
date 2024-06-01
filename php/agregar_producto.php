@@ -4,12 +4,11 @@ session_start();
 include 'conexion_productos.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Recibir datos del formulario de productos
+  
     $cantidad = $_POST['Cantidad'];
     $producto = $_POST['Producto'];
     $disponibilidad = $_POST['Disponibilidad'];
 
-    // Verificar que el nombre del producto no se repita en la base de datos
     $verificar_producto = mysqli_query($conexion, "SELECT * FROM productos WHERE producto='$producto' ");
 
     if (mysqli_num_rows($verificar_producto) > 0) {
@@ -22,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    // Insertar el nuevo producto en la base de datos
     $query = "INSERT INTO productos (cantidad, producto, disponibilidad) 
                 VALUES ('$cantidad', '$producto', '$Disponibilidad')";
 

@@ -7,10 +7,9 @@
     $nombre_completo = $_POST['nombre_completo'];
     $contrasena = $_POST['contrasena'];
 
-    //Encriptamiento de Contraseña
+
     $contrasena = hash('sha512', $contrasena);
 
-    // Verificar que el correo no se repita en la base de datos
     $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' ");
 
     if(mysqli_num_rows($verificar_correo) > 0){
@@ -23,7 +22,6 @@
         exit();
     }
 
-     // Verificar que el nombre completo no se repita en la base de datos
      $verificar_nombre_completo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE nombre_completo='$nombre_completo' ");
 
     if(mysqli_num_rows($verificar_nombre_completo) > 0){
@@ -36,7 +34,7 @@
         exit();
     }
 
-         // Verificar que el usuario no se repita en la base de datos
+
          $verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' ");
 
          if(mysqli_num_rows($verificar_usuario) > 0){
