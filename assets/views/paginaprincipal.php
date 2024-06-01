@@ -27,7 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Principal - SS</title>    
     <link rel="stylesheet" href="../css/style3.css">
-    <link rel="icon" type="image/png" href="/assets/imagenes/SchoolSnackPrototipo.png">
+    <link rel="icon" type="image/png" href="../imagenes/SchoolSnackPrototipo.png">
     <script src="../javascript/script.js"></script>
     <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ASplm5v-IpYU2VAAG7IiKJ3nolHevU8mgmKlWuRfMudbF0LQmviOsGjngqWS1KWGoFe6zjOCaPKRs1-TFB0mWdfdwrwKcGVYj7iSR_qrEVSfXCLhp-1Ug_u-ffWyH5NnCZATQvSH-aXEiLUVnMqB64vM3d5-yVIDX__NRN4xVoDK6GFUgB7lcKXS3HjaMcARoyxM7kAum7oQbyQZJSA-XZgbHPMsy-Ol_qFxtGpseUx_fHkSL8HDyLKe-MmeGemBjYsoJbS2TiHFpOjm8AzHZtfbmOicDqC9To8EY2ie5IsdGtfdMe9Nrr37Q-pdaKO7x7PrMRHGz4URtpUeudmyGw" charset="UTF-8"></script><script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
@@ -192,7 +192,15 @@
         <a class="btn-comprar" href="producto1.html">Comprar</a>
     </div>
     </div>
-    <div class="caja-16"></div>
+    <div class="caja-16">
+    <div class="imagen">
+            <img src="../imagenes/paletasconsal.png" alt="Paletaconsal">
+        </div>
+        <div class="nombre-producto">
+            <p>Paleta Con Sal</p>
+        </div>
+        <a class="btn-comprar" href="producto1.html">Comprar</a>
+    </div>
     <div class="caja-17"></div>
     <div class="caja-18"></div>
     <div class="caja-19"></div>
