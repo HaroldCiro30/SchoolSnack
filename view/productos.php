@@ -3,7 +3,13 @@ session_start();
 
 // Verificar si no hay una sesión activa, redirigir al usuario al inicio de sesión
 if (!isset($_SESSION['usuario'])) {
-    header("Location: login.php");
+    echo '
+            <script>
+                alert("Por favor debes iniciar sesión");
+                window.location = "../index.php";
+            </script>
+            ';
+    header("Location: ../index.php");
     exit(); // Detener la ejecución del script después de redirigir
 }
 

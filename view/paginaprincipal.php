@@ -6,10 +6,10 @@ if (!isset($_SESSION['usuario'])) {
     echo '
             <script>
                 alert("Por favor debes iniciar sesión");
-                window.location = "../assets/index.php";
+                window.location = "../index.php";
             </script>
             ';
-    header("location: ../assets/index.php");
+    header("location: ../index.php");
     session_destroy();
     die();
 }
