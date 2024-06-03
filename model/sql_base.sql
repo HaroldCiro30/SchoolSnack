@@ -18,4 +18,5 @@ CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cantidad INT NOT NULL,
     producto VARCHAR(100) NOT NULL,
+    imagen VARCHAR(255)
 );

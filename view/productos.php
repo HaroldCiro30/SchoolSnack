@@ -40,10 +40,10 @@ $result = $conn->query($sql);
             <thead>
                 <tr>
                     <th class="px-4 py-2">ID</th>
-                    <th class="px-4 py-2">Cantidad</th>
                     <th class="px-4 py-2">Producto</th>
+                    <th class="px-4 py-2">Imagen</th>
+                    <th class="px-4 py-2">Cantidad</th>
                     <th class="px-4 py-2">Disponibilidad</th>
-                    <th class="px-4 py-2">Disponibilidad 2</th>
                     <th class="px-4 py-2">Acciones</th>
                 </tr>
             </thead>
@@ -53,13 +53,12 @@ $result = $conn->query($sql);
                 ?>
                     <tr>
                         <td class="border px-4 py-2"><?php echo $row['id']; ?></td>
-                        <td class="border px-4 py-2"><?php echo $row['cantidad']; ?></td>
                         <td class="border px-4 py-2 capitalize"><?php echo $row['producto']; ?></td>
-                        <td class="border px-4 py-2 capitalize <?php echo $row['cantidad'] == 0 ? 'text-red-500' : 'text-green-500'; ?>">
-                            <?php echo $row['cantidad'] == 0 ? 'Agotado' : 'Disponible'; ?>
+                        <td class="border px-4 py-2">
+                            <img src="../uploads/<?php echo $row['imagen']; ?>" alt="Imagen de Producto" style="width: 100px; height: auto;">
                         </td>
-                        <!-- ! Opcion 2, cambiando el color de fondo, elimina la que no te guste para qeudar con 1 sola -->
-                        <td class="border px-4 py-2 capitalize <?php echo $row['cantidad'] == 0 ? 'bg-red-500 text-white' : 'bg-green-500 text-white'; ?>">
+                        <td class="border px-4 py-2"><?php echo $row['cantidad']; ?></td>
+                        <td class="border px-4 py-2 capitalize <?php echo $row['cantidad'] == 0 ? 'text-red-500' : 'text-green-500'; ?>">
                             <?php echo $row['cantidad'] == 0 ? 'Agotado' : 'Disponible'; ?>
                         </td>
                         <td class="border px-4 py-2">
