@@ -18,5 +18,4 @@ CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cantidad INT NOT NULL,
     producto VARCHAR(100) NOT NULL,
-    disponibilidad VARCHAR(50) NOT NULL
 );

@@ -22,35 +22,57 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Administración de Productos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <h1>Administración de Productos</h1>
-    <a href="agregar_producto.php">Agregar Producto</a>
+    <div class="encabezado text-center">
+        <h1 class="my-4">Administración de Productos</h1>
+        <a href="../view/form_products.php" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Agregar Producto</a>
+        <a href="../controller/functions/users/cerrar_sesion.php" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Cerrar Sesión</a>
+    </div>
     <br><br>
-    <a href="logout.php">Cerrar Sesión</a>
-    <br><br>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Cantidad</th>
-            <th>Producto</th>
-            <th>Disponibilidad</th>
-            <th>Acciones</th>
-        </tr>
-        <?php while($row = $result->fetch_assoc()): ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['cantidad']; ?></td>
-            <td><?php echo $row['producto']; ?></td>
-            <td><?php echo $row['disponibilidad']; ?></td>
-            <td>
-                <a href="editar_producto.php?id=<?php echo $row['id']; ?>">Editar</a>
-                <a href="eliminar_producto.php?id=<?php echo $row['id']; ?>">Eliminar</a>
-            </td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
+    <?php if ($result->num_rows > 0) : ?>
+        <table class="table-auto border-collapse border border-gray-400 mx-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">ID</th>
+                    <th class="px-4 py-2">Cantidad</th>
+                    <th class="px-4 py-2">Producto</th>
+                    <th class="px-4 py-2">Disponibilidad</th>
+                    <th class="px-4 py-2">Disponibilidad 2</th>
+                    <th class="px-4 py-2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                while ($row = $result->fetch_assoc()) :
+                ?>
+                    <tr>
+                        <td class="border px-4 py-2"><?php echo $row['id']; ?></td>
+                        <td class="border px-4 py-2"><?php echo $row['cantidad']; ?></td>
+                        <td class="border px-4 py-2 capitalize"><?php echo $row['producto']; ?></td>
+                        <td class="border px-4 py-2 capitalize <?php echo $row['cantidad'] == 0 ? 'text-red-500' : 'text-green-500'; ?>">
+                            <?php echo $row['cantidad'] == 0 ? 'Agotado' : 'Disponible'; ?>
+                        </td>
+                        <!-- ! Opcion 2, cambiando el color de fondo, elimina la que no te guste para qeudar con 1 sola -->
+                        <td class="border px-4 py-2 capitalize <?php echo $row['cantidad'] == 0 ? 'bg-red-500 text-white' : 'bg-green-500 text-white'; ?>">
+                            <?php echo $row['cantidad'] == 0 ? 'Agotado' : 'Disponible'; ?>
+                        </td>
+                        <td class="border px-4 py-2">
+                            <a href="./editar_producto.php?id=<?php echo $row['id']; ?>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Editar</a>
+                            <a href="../controller/functions/products/eliminar_producto.php?id=<?php echo $row['id']; ?>" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Eliminar</a>
+                        </td>
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+    <?php else : ?>
+        <p class="text-center text-gray-600">No hay productos</p>
+    <?php endif; ?>
 </body>
+
 </html>

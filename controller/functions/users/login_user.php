@@ -1,5 +1,5 @@
 <?php
-include '../../db.php'; // Incluir la conexión a la base de datos
+include '../../db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
