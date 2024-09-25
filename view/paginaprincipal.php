@@ -27,22 +27,68 @@ if (!isset($_SESSION['usuario'])) {
     <title>Pagina Principal - SS</title>
     <link rel="stylesheet" href="../assets/css/style3.css">
     <link rel="icon" type="image/png" href="../assets/imagenes/SchoolSnackPrototipo.png">
-    <script src="../javascript/script.js"></script>
     <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ASplm5v-IpYU2VAAG7IiKJ3nolHevU8mgmKlWuRfMudbF0LQmviOsGjngqWS1KWGoFe6zjOCaPKRs1-TFB0mWdfdwrwKcGVYj7iSR_qrEVSfXCLhp-1Ug_u-ffWyH5NnCZATQvSH-aXEiLUVnMqB64vM3d5-yVIDX__NRN4xVoDK6GFUgB7lcKXS3HjaMcARoyxM7kAum7oQbyQZJSA-XZgbHPMsy-Ol_qFxtGpseUx_fHkSL8HDyLKe-MmeGemBjYsoJbS2TiHFpOjm8AzHZtfbmOicDqC9To8EY2ie5IsdGtfdMe9Nrr37Q-pdaKO7x7PrMRHGz4URtpUeudmyGw" charset="UTF-8"></script>
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+    
+<div class="loader-section">
+  <span class="loader"></span>
+</div>
+
+
     <header>
-        <nav>
-            <img src="../assets/imagenes/SchoolSnackPrototipo.png" width="75" id="logo-nav"></a>
-            <a href="./productos.php">Administrar</a>
-            <a href="aboutus.html">Acerca de Nosotros</a>
-            <a href=""><?php echo ucwords($_SESSION['usuario']); ?></a>
-            <a href="../controller/functions/cerrar_sesion.php">Cerrar Sesión</a>
-        </nav>
+    <nav class="bg-black text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div>
+        <img src="logo.png" alt="Logo" class="h-10">
+      </div>
+
+      <div class="hidden md:flex space-x-8">
+        <a href="paginaprincipal.php" class="hover:text-gray-400">Aperitivo</a>
+        <a href="aboutus.php" class="hover:text-gray-400">Acerca de Nosotros</a>
+        <a href="productos.php" class="hover:text-gray-400">Administrar</a>
+      </div>
+
+      <div class="relative">
+        <button id="profile-btn" class="hidden md:flex items-center focus:outline-none">
+          <img src="profile.jpg" alt="User Profile" class="h-10 w-10 rounded-full">
+        </button>
+
+        <div id="profile-menu" class="hidden absolute right-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg py-2">
+          <div class="px-4 py-2">
+            <p class="font-bold"><?php echo ucwords($_SESSION['usuario']);?></p>
+            <p class="text-sm text-gray-600"><?php echo isset($_SESSION['correo']) && !is_array($_SESSION['correo']) ? $_SESSION['correo'] : 'Correo no disponible'; ?></p>
+          </div>
+          <hr class="border-t border-gray-200 my-2">
+          <a href="perfil.php" class="block px-4 py-2 hover:bg-gray-100">Perfil</a>
+          <a href="../controller/functions/users/cerrar_sesion.php" class="block px-4 py-2 hover:bg-gray-100">Cerrar sesión</a>
+        </div>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="menu" class="hidden md:hidden mt-4 space-y-4 slide-down">
+      <a href="#" class="block text-white hover:bg-gray-700 p-2 rounded">Aperitivo</a>
+      <a href="#" class="block text-white hover:bg-gray-700 p-2 rounded">Acerca de Nosotros</a>
+      <a href="#" class="block text-white hover:bg-gray-700 p-2 rounded">Administrar</a>
+      <a href="#" class="block text-white hover:bg-gray-700 p-2 rounded">Perfil</a>
+    </div>
+  </nav>
+
+  <script src="../assets/javascript/main.js"></script>
     </header>
     <main>
+
         <section id="bienvenida-inicio">
             <h2 id="bienvenida-h2">¡Bienvenidos a la pagina principal de SchoolSnack!</h2>
 
@@ -236,6 +282,6 @@ if (!isset($_SESSION['usuario'])) {
             <small>&copy; 2024 <b>SchoolSnack</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
+    <script src="../assets/javascript/loader.js"></script>
 </body>
-
 </html>

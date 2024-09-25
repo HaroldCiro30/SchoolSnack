@@ -21,6 +21,12 @@ header {
   transition: top 0.3s;
 }
 
+#bienvenida-h2 {
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 3rem;   /* Tamaño de la fuente */
+  margin-top: 20px;   /* Espacio superior */
+}
+
 
 nav {
   display: flex;
@@ -37,13 +43,7 @@ nav a {
   color: white;
 }
 
-#bienvenida-h2 {
-    font-size: 3rem;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    color: white;
-}
+
 
 #lista-prod {
   font-family: 'Montserrat', sans-serif;
@@ -89,6 +89,45 @@ nav a {
     height: 100%;
     object-fit: cover; 
 }
+
+.loader-section{
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  z-index:999;
+  transition: all 1s 1s ease-out;
+  opacity:1;
+}
+.loaded{
+  opacity:0;
+  z-index:-1;
+}
+  
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #623ddb;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
 
 .btn-comprar {
   display: block; 
@@ -188,6 +227,7 @@ body.scrolled-up header {
 }
 
 
+
 @media (max-width: 480px) {
     
   #bienvenida-inicio {
@@ -210,9 +250,7 @@ body.scrolled-up header {
       
     }  
   
-    #bienvenida-h2 {
-      font-size: auto;
-    }
+  
 
 
   }

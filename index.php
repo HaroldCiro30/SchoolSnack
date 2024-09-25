@@ -10,6 +10,9 @@
 </head>
 
 <body>
+<div class="loader-section">
+  <span class="loader"></span>
+</div>
     <div class="container">
         <div class="signin-signup">
 
@@ -31,42 +34,35 @@
 
             <!--Registro-->
 
-            <form action="./controller/functions/users/register_user.php" method="POST" class="sign-up-form">
-                <h2 class="title">Registrate</h2>
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Usuario" name="usuario">
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Email" name="correo">
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Nombre Completo" name="nombre_completo">
-                </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Contraseña" name="contrasena">
-                </div>
-                <input type="submit" value="Registrate" class="btn">
-                <p class="social-text">Registrate tambien con estas redes!</p>
-                <div class="social-media">
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-                <p class="account-text">Ya tienes una cuenta? <a href="#" id="sign-in-btn2">Ingresa!</a></p>
-            </form>
+            <form action="./controller/functions/users/register_user.php" method="POST" class="sign-up-form" enctype="multipart/form-data">
+    <h2 class="title">Registrate</h2>
+    <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Usuario" name="usuario">
+    </div>
+    <div class="input-field">
+        <i class="fas fa-envelope"></i>
+        <input type="text" placeholder="Email" name="correo">
+    </div>
+    <div class="input-field">
+        <i class="fas fa-envelope"></i>
+        <input type="text" placeholder="Nombre Completo" name="nombre_completo">
+    </div>
+    <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Contraseña" name="contrasena">
+    </div>
+    <div class="input-field">
+        <i class="fas fa-image"></i>
+        <input type="file" name="imagen" accept="image/*">
+    </div>
+    <input type="submit" value="Registrate" class="btn">
+    <p class="social-text">Registrate tambien con estas redes!</p>
+    <div class="social-media">
+        <!-- Social media icons -->
+    </div>
+    <p class="account-text">Ya tienes una cuenta? <a href="#" id="sign-in-btn2">Ingresa!</a></p>
+</form>
         </div>1
         <div class="panels-container">
             <div class="panel left-panel">
@@ -88,8 +84,7 @@
         </div>
     </div>
     <script src="./assets/javascript/app.js"></script>
+    <script src="../assets/javascript/loader.js"></script>
 </body>
-
-</html>
 
 </html>
