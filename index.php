@@ -10,9 +10,7 @@
 </head>
 
 <body>
-<div class="loader-section">
-  <span class="loader"></span>
-</div>
+
     <div class="container">
         <div class="signin-signup">
 

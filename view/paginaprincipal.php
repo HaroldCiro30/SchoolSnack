@@ -30,6 +30,7 @@ if (!isset($_SESSION['usuario'])) {
     <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ASplm5v-IpYU2VAAG7IiKJ3nolHevU8mgmKlWuRfMudbF0LQmviOsGjngqWS1KWGoFe6zjOCaPKRs1-TFB0mWdfdwrwKcGVYj7iSR_qrEVSfXCLhp-1Ug_u-ffWyH5NnCZATQvSH-aXEiLUVnMqB64vM3d5-yVIDX__NRN4xVoDK6GFUgB7lcKXS3HjaMcARoyxM7kAum7oQbyQZJSA-XZgbHPMsy-Ol_qFxtGpseUx_fHkSL8HDyLKe-MmeGemBjYsoJbS2TiHFpOjm8AzHZtfbmOicDqC9To8EY2ie5IsdGtfdMe9Nrr37Q-pdaKO7x7PrMRHGz4URtpUeudmyGw" charset="UTF-8"></script>
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -40,7 +41,7 @@ if (!isset($_SESSION['usuario'])) {
 
 
     <header>
-    <nav class="bg-black text-white p-4">
+    <nav class="bg-black text-white p-2">
     <div class="container mx-auto flex justify-between items-center">
       <div>
         <img src="logo.png" alt="Logo" class="h-10">
@@ -85,175 +86,187 @@ if (!isset($_SESSION['usuario'])) {
     </div>
   </nav>
 
-  <script src="../assets/javascript/main.js"></script>
-    </header>
+    <script src="../assets/javascript/main.js"></script>
+  </header>
+
     <main>
-
-        <section id="bienvenida-inicio">
-            <h2 id="bienvenida-h2">¡Bienvenidos a la pagina principal de SchoolSnack!</h2>
-
+        <section class="bienvenida-inicio">
+            <h2>¡Bienvenidos a la pagina principal de SchoolSnack!</h2>
         </section>
 
-        <section id="lista-fondo">
-            <h2 id="lista-h2">Lista de Productos</h2>
-        </section>
+        <div class="container">
 
-        <section id="container">
-            <div class="caja-1">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Empanada.png" alt="Empanada">
-                </div>
-                <div class="nombre-producto">
-                    <p>Empanada</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-2">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Palitos de queso.png" alt="Palitos de queso">
-                </div>
-                <div class="nombre-producto">
-                    <p>Palito De Queso</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-3">
-                <div class="imagen">
-                    <img src="../assets/imagenes/panzeroti.png" alt="Panzerotti">
-                </div>
-                <div class="nombre-producto">
-                    <p>Panzerotti</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-4">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Papa rellena.png" alt="Papa Rellena">
-                </div>
-                <div class="nombre-producto">
-                    <p>Papa Rellena</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-5">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Pastel de pollo.png" alt="Pastel de Pollo">
-                </div>
-                <div class="nombre-producto">
-                    <p>Pastel de Pollo</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-6">
-                <div class="imagen">
-                    <img src="../assets/imagenes/coca cola.png" alt="Coca Cola">
-                </div>
-                <div class="nombre-producto">
-                    <p>Coca Cola</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-7">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Colombiana.png" alt="Colombiana">
-                </div>
-                <div class="nombre-producto">
-                    <p>Colombiana</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-8">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Hit (bebida).png" alt="Jugos Hits">
-                </div>
-                <div class="nombre-producto">
-                    <p>Jugos Hit</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-9">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Pepsi.png" alt="Pepsi">
-                </div>
-                <div class="nombre-producto">
-                    <p>Pepsi</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-10">
-                <div class="imagen">
-                    <img src="../assets/imagenes/PapasChiss.png" alt="Papas Chiss">
-                </div>
-                <div class="nombre-producto">
-                    <p>Papas Chiss</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-11">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Pintalabios.png" alt="Pintalabios">
-                </div>
-                <div class="nombre-producto">
-                    <p>Pintalabios</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            </div>
-            <div class="caja-12">
-                <div class="imagen">
-                    <img src="../assets/imagenes/BombonesPinta.png" alt="Bombones Pintalabios">
-                </div>
-                <div class="nombre-producto">
-                    <p>Bombon Pintalabios</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            </div>
-            <div class="caja-13">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Revolcones.png" alt="Revolcones">
-                </div>
-                <div class="nombre-producto">
-                    <p>Revolcon</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            </div>
-            <div class="caja-14">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Mango.png" alt="Mango">
-                </div>
-                <div class="nombre-producto">
-                    <p>Mango</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            </div>
-            <div class="caja-15">
-                <div class="imagen">
-                    <img src="../assets/imagenes/Crema.png" alt="Crema">
-                </div>
-                <div class="nombre-producto">
-                    <p>Crema</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            </div>
-            <div class="caja-16">
-                <div class="imagen">
-                    <img src="../assets/imagenes/paletasconsal.png" alt="Paletaconsal">
-                </div>
-                <div class="nombre-producto">
-                    <p>Paleta Con Sal</p>
-                </div>
-                <a class="btn-comprar" href="producto1.html">Comprar</a>
-            </div>
-            <div class="caja-17"></div>
-            <div class="caja-18"></div>
-            <div class="caja-19"></div>
-            <div class="caja-20"></div>
-        </section>
-    </main>
+   <h3 class="title"> PRODUCTOS - TIENDA </h3>
+
+   <div class="products-container">
+
+      <div class="product" data-name="p-1">
+         <img src="../assets/imagenes/empanada.png" alt="">
+         <h3>Empanada</h3>
+         <div class="price">$2.000</div>
+      </div>
+
+      <div class="product" data-name="p-2">
+      <img src="../assets/imagenes/empanada.png" alt="">
+         <h3>Empanada</h3>
+         <div class="price">$2.000</div>
+      </div>
+
+      <div class="product" data-name="p-3">
+      <img src="../assets/imagenes/empanada.png" alt="">
+         <h3>Empanada</h3>
+         <div class="price">$2.000</div>
+      </div>
+
+      <div class="product" data-name="p-4">
+      <img src="../assets/imagenes/empanada.png" alt="">
+         <h3>Empanada</h3>
+         <div class="price">$2.000</div>
+      </div>
+
+      <div class="product" data-name="p-5">
+      <img src="../assets/imagenes/empanada.png" alt="">
+         <h3>Empanada</h3>
+         <div class="price">$2.000</div>
+      </div>
+
+      <div class="product" data-name="p-6">
+      <img src="../assets/imagenes/empanada.png" alt="">
+         <h3>Empanada</h3>
+         <div class="price">$2.000</div>
+      </div>
+
+   </div>
+
+</div>
+
+<div class="products-preview">
+
+   <div class="preview" data-target="p-1">
+      <i class="fas fa-times"></i>
+      <img src="../assets/imagenes/empanada.png" alt="">
+      <h3>Empanadas</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">$2.000</div>
+      <div class="buttons">
+         <a href="#" class="buy">Compra ya!</a>
+         <a href="#" class="cart">Añade al Carrito</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-2">
+      <i class="fas fa-times"></i>
+      <img src="../assets/imagenes/empanada.png" alt="">
+      <h3>Empanadas</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">$2.000</div>
+      <div class="buttons">
+         <a href="#" class="buy">Compra ya!</a>
+         <a href="#" class="cart">Añade al Carrito</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-3">
+      <i class="fas fa-times"></i>
+      <img src="../assets/imagenes/empanada.png" alt="">
+      <h3>Empanadas</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">$2.000</div>
+      <div class="buttons">
+         <a href="#" class="buy">Compra ya!</a>
+         <a href="#" class="cart">Añade al Carrito</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-4">
+      <i class="fas fa-times"></i>
+      <img src="../assets/imagenes/empanada.png" alt="">
+      <h3>Empanadas</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">$2.000</div>
+      <div class="buttons">
+         <a href="#" class="buy">Compra ya!</a>
+         <a href="#" class="cart">Añade al Carrito</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-5">
+      <i class="fas fa-times"></i>
+      <img src="../assets/imagenes/empanada.png" alt="">
+      <h3>Empanadas</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">$2.000</div>
+      <div class="buttons">
+         <a href="#" class="buy">Compra ya!</a>
+         <a href="#" class="cart">Añade al Carrito</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-6">
+      <i class="fas fa-times"></i>
+      <img src="../assets/imagenes/empanada.png" alt="">
+      <h3>Empanadas</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">$2.000</div>
+      <div class="buttons">
+         <a href="#" class="buy">Compra ya!</a>
+         <a href="#" class="cart">Añade al Carrito</a>
+      </div>
+   </div>
+
+</div>
+</div>
+
+
+        
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
@@ -283,5 +296,6 @@ if (!isset($_SESSION['usuario'])) {
         </div>
     </footer>
     <script src="../assets/javascript/loader.js"></script>
+    <script src="../assets/javascript/script_1.js"></script>
 </body>
 </html>
