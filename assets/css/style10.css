@@ -111,20 +111,26 @@ nav a {
 .container-info {
   display: grid;
   place-content: center;
+  align-content: center;
+  justify-content: center;
   margin: auto;
   font-size: 125%;
   margin-bottom: 2rem;
 }
 
-.container-background {
+.container-info > p {
   display: grid;
   place-content: center;
+  text-align: center;
   margin: auto;
-  width: 70%;
-  height: 70%;
+  width: 62%;
+  height: 90%;
 }
 
-.container-info > h4 {
+.container-info h4 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
   font-size: 4rem;
 }
 

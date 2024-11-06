@@ -30,29 +30,73 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-    <div class="encabezado text-center">
+
+    <div class="loader-section">
+        <span class="loader"></span>
+    </div>
+
     <header>
-    <nav class="bg-black text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <div>
-        <img src="logo.png" alt="Logo" class="h-10">
-      </div>
+    <nav class="bg-black text-white py-4 px-6 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="paginaprincipal.php">
+                <img src="../assets/imagenes/SchoolSnackPrototipo.png" alt="Logo" class="h-10 w-auto">
+            </a>
+        </div>
+  
 
-      <div class="hidden md:flex space-x-8">
-        <a href="paginaprincipal.php" class="hover:text-gray-400">Aperitivo</a>
-        <a href="aboutus.php" class="hover:text-gray-400">Acerca de Nosotros</a>
-        <a href="productos.php" class="hover:text-gray-400">Administrar</a>
-      </div>
+  <div class="hidden md:flex space-x-8">
+    <a href="paginaprincipal.php" class="text-lg font-semibold hover:text-orange-400 transition duration-300">Inicio</a>
+    <a href="aboutus.php" class="text-lg font-semibold hover:text-orange-400 transition duration-300">Acerca de Nosotros</a>
+    <a href="productos.php" class="text-lg font-semibold hover:text-orange-400 transition duration-300">Administrar</a>
+    <a href="contactanos.php" class="text-lg font-semibold hover:text-orange-400 transition duration-300">Contactanos</a>
+  </div>
 
-      <div class="relative">
+ 
+  <div class="relative">
         <button id="profile-btn" class="hidden md:flex items-center focus:outline-none">
-          <img src="profile.jpg" alt="User Profile" class="h-10 w-10 rounded-full">
+        <?php
+include '../controller/db.php'; 
+
+
+$usuario_actual = $_SESSION['usuario'];
+
+
+$sql = "SELECT imagen FROM usuarios WHERE usuario='$usuario_actual'";
+$resultado = mysqli_query($conn, $sql);
+
+if ($resultado && mysqli_num_rows($resultado) > 0) {
+    $fila = mysqli_fetch_assoc($resultado);
+    $rutaImagen = '../uploads/' . $fila['imagen']; 
+} else {
+    $rutaImagen = '../../../uploads/default.png';
+}
+
+?>
+
+
+<img src="<?php echo $rutaImagen; ?>" alt="Imagen de perfil" class="profile-image" style="width: 50px; height: 50px; border-radius: 50%; object-fit: fill;">
+
         </button>
 
         <div id="profile-menu" class="hidden absolute right-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg py-2">
           <div class="px-4 py-2">
+          <?php
+include '../controller/db.php'; 
+$usuario_actual = $_SESSION['usuario'];
+
+$sql = "SELECT correo FROM usuarios WHERE usuario='$usuario_actual'";
+$resultado = mysqli_query($conn, $sql);
+
+if ($resultado && mysqli_num_rows($resultado) > 0) {
+    $fila = mysqli_fetch_assoc($resultado);
+    $correo = $fila['correo'];
+
+} else {
+    $correo = "Correo no disponible";
+}
+?>
             <p class="font-bold"><?php echo ucwords($_SESSION['usuario']);?></p>
-            <p class="text-sm text-gray-600"><?php echo isset($_SESSION['correo']) && !is_array($_SESSION['correo']) ? $_SESSION['correo'] : 'Correo no disponible'; ?></p>
+            <p class="text-sm text-gray-600"><?php echo $correo;?></p>
           </div>
           <hr class="border-t border-gray-200 my-2">
           <a href="perfil.php" class="block px-4 py-2 hover:bg-gray-100">Perfil</a>
@@ -68,18 +112,19 @@ $result = $conn->query($sql);
         </button>
       </div>
     </div>
+</nav>
 
-    <div id="menu" class="hidden md:hidden mt-4 space-y-4 slide-down">
-      <a href="#" class="block text-white hover:bg-gray-700 p-2 rounded">Aperitivo</a>
-      <a href="#" class="block text-white hover:bg-gray-700 p-2 rounded">Acerca de Nosotros</a>
-      <a href="#" class="block text-white hover:bg-gray-700 p-2 rounded">Administrar</a>
-      <a href="#" class="block text-white hover:bg-gray-700 p-2 rounded">Perfil</a>
-    </div>
-  </nav>
+<div id="mobile-menu" class="hidden md:hidden bg-black text-white py-2">
+  <a href="#aperitivo" class="block px-4 py-2 text-lg hover:bg-orange-500">Aperitivo</a>
+  <a href="#acerca" class="block px-4 py-2 text-lg hover:bg-orange-500">Acerca de Nosotros</a>
+  <a href="#admin" class="block px-4 py-2 text-lg hover:bg-orange-500">Administrar</a>
+</div>
+</nav>
 
-  <script src="../assets/javascript/main.js"></script>
-    </nav>  
-    </header> 
+    <script src="../assets/javascript/main.js"></script>
+  </header>
+  
+    <div class="encabezado text-center">
         <h1 class="my-4">Administración de Productos</h1>
         <a href="../view/form_products.php" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Agregar Producto</a>
         <a href="../controller/functions/users/cerrar_sesion.php" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Cerrar Sesión</a>
