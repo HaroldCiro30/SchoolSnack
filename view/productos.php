@@ -138,6 +138,9 @@ if ($resultado && mysqli_num_rows($resultado) > 0) {
                     <th class="px-4 py-2">Producto</th>
                     <th class="px-4 py-2">Imagen</th>
                     <th class="px-4 py-2">Cantidad</th>
+                    <th class="px-4 py-2">Descripcion</th>
+                    <th class="px-4 py-2">Precio</th>
+                    <th class="px-4 py-2">Rating</th>
                     <th class="px-4 py-2">Disponibilidad</th>
                     <th class="px-4 py-2">Acciones</th>
                 </tr>
@@ -148,11 +151,14 @@ if ($resultado && mysqli_num_rows($resultado) > 0) {
                 ?>
                     <tr>
                         <td class="border px-4 py-2"><?php echo $row['id']; ?></td>
-                        <td class="border px-4 py-2 capitalize"><?php echo $row['producto']; ?></td>
+                        <td class="border px-4 py-2 capitalize"><?php echo $row['nombre']; ?></td>
                         <td class="border px-4 py-2">
                             <img src="../uploads/<?php echo $row['imagen']; ?>" alt="Imagen de Producto" style="width: 100px; height: auto;">
                         </td>
                         <td class="border px-4 py-2"><?php echo $row['cantidad']; ?></td>
+                        <td class="border px-4 py-2 capitalize"><?php echo $row['descripcion']; ?></td>
+                        <td class="border px-4 py-2 capitalize"><?php echo $row['rating']; ?></td>
+                        <td class="border px-4 py-2 capitalize"><?php echo $row['precio']; ?></td>
                         <td class="border px-4 py-2 capitalize <?php echo $row['cantidad'] == 0 ? 'text-red-500' : 'text-green-500'; ?>">
                             <?php echo $row['cantidad'] == 0 ? 'Agotado' : 'Disponible'; ?>
                         </td>

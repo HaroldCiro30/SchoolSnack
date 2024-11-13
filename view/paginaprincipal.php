@@ -14,6 +14,11 @@ if (!isset($_SESSION['usuario'])) {
     die();
 }
 
+include '../controller/db.php'; // Incluir la conexión a la base de datos
+
+// Consulta todos los productos de la base de datos
+$sql = "SELECT * FROM productos";
+$result = $conn->query($sql);
 ?>
 
 
@@ -239,6 +244,47 @@ if (!isset($_SESSION['usuario'])) {
                 </div>
             </div>
             <!-- Puedes agregar más tarjetas de producto aquí -->
+             <div class="product-cards-container">
+    <?php
+    // Loop para cada producto en el resultado de la consulta
+    while ($row = $result->fetch_assoc()) :
+    ?>
+        <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden mb-4">
+            <div class="relative">
+                <img src="../uploads/<?php echo $row['imagen']; ?>" alt="Imagen de <?php echo $row['nombre']; ?>" class="w-full h-48 object-cover"> 
+                <!-- Agregar la etiqueta "Más vendido" solo si cumple una condición -->
+                <?php if ($row['cantidad'] > 10) : ?>
+                    <span class="absolute top-2 right-2 bg-orange-500 text-white px-2 py-1 rounded-full text-sm font-semibold">
+                        Más vendido
+                    </span>
+                <?php endif; ?>
+            </div>
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-lg font-semibold"><?php echo ucfirst($row['nombre']); ?></h3>
+                    <span class="text-orange-500 font-bold"><?php echo "$" . number_format($row['precio'], 2); ?></span>
+                </div>
+                <div class="flex items-center mb-2">
+                    <!-- Mostrar rating como número -->
+                    <span class="text-sm text-gray-500 ml-2"><?php echo $row['rating']; ?> / 5</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4"><?php echo ucfirst($row['descripcion']); ?></p>
+                <div class="flex gap-2">
+                    <button class="flex-1 bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                        Comprar ahora
+                    </button>
+                    <button onclick="addToCart('<?php echo $row['nombre']; ?>', <?php echo $row['precio']; ?>)" class="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+                <p class="text-sm mt-2 <?php echo $row['cantidad'] == 0 ? 'text-red-500' : 'text-green-500'; ?>">
+                    <?php echo $row['cantidad'] == 0 ? 'Agotado' : 'Disponible'; ?>
+                </p>
+            </div>
+        </div>
+    <?php endwhile; ?>
+</div>
+             
         </div>
     </div>
 

@@ -3,7 +3,10 @@ include '../../db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cantidad = $_POST['cantidad'];
-    $producto = $_POST['producto'];
+    $nombre = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
+    $precio = $_POST['precio'];
+    $rating = $_POST['rating'];
 
     // Manejar la carga del archivo
     if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
@@ -29,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Preparar la consulta SQL para insertar el nuevo producto
-    $sql = "INSERT INTO productos (cantidad, producto, imagen) VALUES ('$cantidad', '$producto', '$nombreArchivo')";
+    $sql = "INSERT INTO productos (cantidad, nombre, imagen, descripcion, precio, rating) VALUES ('$cantidad', '$nombre', '$nombreArchivo', '$descripcion', '$rating', '$precio')";
 
     // Ejecutar la consulta y verificar si fue exitosa
     if ($conn->query($sql) === TRUE) {
